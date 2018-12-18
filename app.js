@@ -16,7 +16,7 @@ const connection = mysql.createConnection ({
 //     database: 'wx'
     
     host: process.env.DB_HOST,
-    port: 3306,
+    //port: 3306,
     user: process.env.DB_USER,  // Environment variable. Start app like: 'DB_USER=app DB_PASS=test nodemond index.js' OR use .env
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
