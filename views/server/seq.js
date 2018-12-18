@@ -1,18 +1,18 @@
-const Sequelize = require('sequelize')
+const lize = require('lize')
 
-const sequelize = new Sequelize('blog', 'root', 'root', {
+const lize = new lize('blog', 'root', 'root', {
     host: 'localhost',
     dialect: 'mysql',
     port: 3308,
 })
 
-var User = sequelize.define('user', {
+var User = lize.define('user', {
     first_name: {
-        type: Sequelize.STRING, // 指定值的类型
+        type: lize.STRING, // 指定值的类型
     },
     // 没有指定 field，表中键名称则与对象键名相同，为 email
     last_name: {
-        type: Sequelize.STRING
+        type: lize.STRING
     }
 }, {
     // 如果为 true 则表的名称和 model 相同，即 user
