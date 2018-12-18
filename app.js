@@ -36,7 +36,7 @@ routers(app)
 if (module.parent) {
     module.exports = app
 } else {
-    app.listen(80, () => {
+    app.listen(process.env.PORT || 3000, () => {
         console.log("server start!")
     })
 }
