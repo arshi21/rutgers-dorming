@@ -7,24 +7,24 @@ const flash = require('connect-flash')
 const emptyDorm  = require('./util/dormTemplate').emptyDorm
 const mysql = require("mysql");
 
-const connection = mysql.createConnection ({
+// const connection = mysql.createConnection ({
     
-//     host: 'localhost',
-//    //port: 3306,
-//     user: 'root',  // Environment variable. Start app like: 'DB_USER=app DB_PASS=test nodemond index.js' OR use .env
-//     password: 'parikhster',
-//     database: 'wx'
+// //     host: 'localhost',
+// //    //port: 3306,
+// //     user: 'root',  // Environment variable. Start app like: 'DB_USER=app DB_PASS=test nodemond index.js' OR use .env
+// //     password: 'parikhster',
+// //     database: 'wx'
     
-    host: process.env.DB_HOST,
-    port: 3306,
-    user: process.env.DB_USER,  // Environment variable. Start app like: 'DB_USER=app DB_PASS=test nodemond index.js' OR use .env
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME
-});
+//     host: process.env.DB_HOST,
+//     port: 3306,
+//     user: process.env.DB_USER,  // Environment variable. Start app like: 'DB_USER=app DB_PASS=test nodemond index.js' OR use .env
+//     password: process.env.DB_PASS,
+//     database: process.env.DB_NAME
+// });
 
-connection.connect();
+// connection.connect();
 
-const app = express()
+const app = express();
 
 app.set('views', path.join(__dirname, "views"))
 app.set('view engine', 'ejs')
