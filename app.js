@@ -5,6 +5,7 @@ const routers = require('./routers')
 const session = require('express-session')
 const flash = require('connect-flash')
 const emptyDorm  = require('./util/dormTemplate').emptyDorm
+var mysql = require("mysql");
 const app = express()
 
 var connection = mysql.createConnection({
