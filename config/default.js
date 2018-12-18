@@ -9,7 +9,7 @@ module.exports = {
         host: 'localhost',
         port: 3306,
         username: 'root',
-        password: '$Aa12345678',
+        password: 'parikhster',
         database: 'wx'
     },
     admin: {
