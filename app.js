@@ -14,6 +14,9 @@ const connection = mysql.createConnection ({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 });
+
+connection.connect();
+
 const app = express()
 app.set('views', path.join(__dirname, "views"))
 app.set('view engine', 'ejs')
