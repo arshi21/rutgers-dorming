@@ -6,6 +6,16 @@ const session = require('express-session')
 const flash = require('connect-flash')
 const emptyDorm  = require('./util/dormTemplate').emptyDorm
 const app = express()
+
+var connection = mysql.createConnection({
+    host: process.env.DB_HOST,
+    port: 3306,
+    user: process.env.DB_USER,  // Environment variable. Start app like: 'DB_USER=app DB_PASS=test nodemond index.js' OR use .env
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
+});
+
+connection.connect()
 app.set('views', path.join(__dirname, "views"))
 app.set('view engine', 'ejs')
 app.use(express.static(path.join(__dirname, "public")))
