@@ -36,7 +36,7 @@ routers(app)
 if (module.parent) {
     module.exports = app
 } else {
-    app.listen(3000, () => {
+    app.listen(80, () => {
         console.log("server start!")
     })
 }
