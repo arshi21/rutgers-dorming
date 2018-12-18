@@ -13,8 +13,9 @@ module.exports = {
         // database: 'wx'
         host: process.env.DB_HOST,
         port: 3306,
+        
         user: process.env.DB_USER,  // Environment variable. Start app like: 'DB_USER=app DB_PASS=test nodemond index.js' OR use .env
-        password: process.env.DB_PASSWORD,
+        password: process.env.DB_PASS,
         database: process.env.DB_NAME
     },
     admin: {
