@@ -19,7 +19,7 @@ router.post('/', checkNotLogin, (req, res) => {
     } else if (password != repassword) {
         req.flash("error","password does not match！")
         return res.redirect('back')
-    } else if (email.endsWith('.edu') == true) {
+    } else if (email.endsWith('rutgers.edu') == true) {
         req.flash("error","you are not using a student email, we cannot identify you are a student!")
         return res.redirect('back')
     }
